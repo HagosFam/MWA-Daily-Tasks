@@ -1,10 +1,10 @@
 const http = require('http');
-const express = require('express')
+const express = require('express');
 require('dotenv').config;
 const app = express();
 
 // for serving files
-const path = require("path")
+const path = require("path");
 
 // response with status code
 app.get("/home", function(req, res){
@@ -24,7 +24,6 @@ app.get("/file", function(req, res) {
     console.log("File requested");
     res.status(200).sendFile(path.join(__dirname, "index.html"));
 })
-
 
 const server = app.listen(process.env.PORT, function(){
     console.log("App listening requests at ", server.address().port);
