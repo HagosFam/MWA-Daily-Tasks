@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "dotenv": "^16.1.1",
+    "express": "^4.18.2"
+  },
+  "name": "day02",
+  "version": "1.0.0",
+  "description": "serving json, file and just text",
+  "main": "express.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node express.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NODE",
+    "EXPRESS",
+    "NPM"
+  ],
+  "author": "Engineer Hagos",
+  "license": "ISC"
+}
