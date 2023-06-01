@@ -1,6 +1,7 @@
 const http = require('http');
 const express = require('express');
-require('dotenv').config;
+require('dotenv').config(); // all the static configs to the already existed module called process
+                            // it will be accessible process.env.name, e.g. process.env.PORT    
 const app = express();
 
 // for serving files
@@ -10,6 +11,15 @@ const path = require("path");
 app.get("/home", function(req, res){
     res.status(200).send("Home working fine");
 });
+// serving dynamic files
+// to access, we use like localhost:3000/filename ( the filename is a file inside the public folder)
+app.use(express.static(path.join(__dirname, "public")))
+// to give them specific starting path for all files that are in the same folder
+
+app.use("/pages", express.static(path.join(__dirname, "public"))); // we call this middleware
+// localhost:3000/pages/index.html
+
+
 
 // response with data 
 
